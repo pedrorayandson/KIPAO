@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="Database.js"></script>
+	<script src="Ki Pão.js"></script>
+	<link rel="stylesheet" type="text/css" href="Ki Pão.css">
+	<title>Adcionar</title>
+</head>
+<body>
+	<div class="line">
+		<div class="line2">
+			<div class="breakapart">
+				<label>Nome</label><input type="text" id="Nome_Produto">
+				<label>Preço</label><input type="number" id="Preco_Produto">
+			</div>
+			<div class="breakapartt">
+				<label>Serial</label><input type="number" id = "Serial_Produto">
+				<label>Marca</label><input type="text" id = "Marca_Produto">
+			</div>
+			<button class="button" onClick="adicionar_produto()"> Adcionar </button>
+			<button onClick="Zerar()"> Zerar </button>
+	</div>
+		</div>
+	<div class="table">
+		<table id="add_product" border="1">
+			<th> Id Produto </th>
+			<th> Nome do Produto </th>
+			<th> Preço do Produto </th>
+			<th> Marca do Produto</th>
+		</table>
+</div>
+</body>
+</html>

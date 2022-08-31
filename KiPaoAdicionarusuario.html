@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="Database.js"></script>
+	<script src="Ki Pão.js"></script>
+	<link rel="stylesheet" type="text/css" href="Ki Pão.css">
+	<title>Adcionar</title>
+</head>
+<body>
+	<div class="line">
+		<div class="line2">
+			<div class="breakapart3">
+				<label class="label">Nome:</label><input type="text" id="Nome_Usuario">
+				<label class="label11">Username:</label><input type="text" id="Username_Usuario">
+				<label class="label22">Senha:</label><input type="number" id = "Password_Usuario">
+				<label class="label3">Idade:</label><input type="number" id = "Age_Usuario">
+			</div>
+			<div class="breakapartt4">
+				<label class="label4">Nacionalidade:</label><input type="text" id = "nationality_Usuario">
+				<label class="label5">Nascimento:</label><input type="text" id = "birthDate_Usuario">
+				<label class="label6">Função:</label><input type="text" id = "position_Usuario">
+			</div>
+			<button class="buttonn" onClick="adicionar_usuario()"> Adcionar </button>
+	</div>
+		</div>
+	<div class="table">
+		<table id="add_productt" border="1">
+			<th> Nome do Usuario </th>
+			<th> Username do Usuario</th>
+			<th> Senha do Usuario </th>
+			<th> Idade do Usuario</th>
+			<th> Nacionalidade do Usuario</th>
+			<th> Nascimento do Usuario</th>
+			<th> Posição do Usuario</th>
+		</table>
+	</div>
+	<div class="button1">
+        <button onClick="zerarr()"> Zerar </button>
+        <button onClick="salvarr()"> Salvar </button>
+    </div>
+</body>
+</html>

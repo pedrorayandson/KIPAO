@@ -1,0 +1,748 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: Arial;
+}
+input{
+  border-radius: 10px;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  border-color: #ff1616;
+}
+input:focus::placeholder{
+  color: #f9af26;
+}
+button{
+  border-radius: 15px;
+  background-color: #f9af26;
+  border: none;
+  color: #662517;
+  font-weight: bold;
+}
+button:active{
+  background-color: yellow;
+}
+label{
+  color: #f9af26;
+}
+#allHistory{
+  width: 100%;
+  height: 175%;
+}
+#all, .line, .linne, .linee{
+  position:relative;
+  width: 100%;
+  height: 100%;
+}
+#all2{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+#center{
+  background-color: #662517;
+  position: absolute;
+  width: 30%;
+  height: 490px;
+  top: 10%;
+  left: 34.85%;
+}
+#list,.table,.table1,.table2{
+  position: absolute;
+  overflow-y: scroll;
+  height: 80%;
+  width: 48%;
+  top: 2%;
+  right: 0;
+  border: 2px solid #ff1616;
+  border-radius: 8px;
+}
+#user{
+  height: 25%;
+  width: 100%;
+  background-color: #f9af26;
+}
+#delete{
+  position: absolute;
+  bottom: 5%;
+  left: 9.5%;
+  width: 272px;
+  height: 120px;
+}
+#delete > input{
+  width: 100%;
+  height: 30%;
+}
+#delete > button{
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 20%;
+}
+#finalPrice{
+  position: absolute;
+  right: 17%;
+  bottom: 5%;
+}
+#tabela_carrinho{
+  width: 100%;
+  border-collapse: collapse;
+}
+tr > th{
+  border: 2px solid #ff1616
+}
+#insertP{
+  position: absolute;
+  width: 340px;
+  height: 200px;
+  top: 2%;
+  left: 5%;
+}
+#change{
+  position: fixed;
+  width: 450px;
+  height: 400px;
+  left: 35%;
+  top: 15%;
+  display: none;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #ff1616;
+}
+#change > button, input{
+  height: 10%;
+  width: 70%;
+}
+#change > button ~ button{
+  position: absolute;
+  bottom: 5%;
+  left: 15%;
+}
+#change > button[onclick="calculateChange()"]{
+  position: absolute;
+  right: 6%;
+  width: 15%;
+  top: 30%;
+}
+#valueT{
+  position: absolute;
+  left: 2%;
+  top: 2%;
+}
+#valueGave{
+  position: absolute;
+  left: 8%;
+  top: 30%;
+}
+.finalchange{
+  position: absolute;
+  top: 50%;
+  left: 15%;
+}
+label[for="valueGave"]{
+  position: absolute;
+  display: block;
+  left: 8%;
+  top: 24%;
+}
+#insertP > input, button{
+  display: block;
+  width: 80%;
+  height: 20%;
+}
+#serial_input{
+  position: absolute;
+  right: 2%;
+  top: 15%;
+}
+#qnt_input{
+  position: absolute;
+  bottom: 28%;
+  right: 2%;
+}
+#tabela_carrinho, th, td{
+  border: 1.5px solid black;
+}
+#insertP > button{
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+}
+#serial_input[type=number]::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+#delete > input[type=number]::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+#insertP > label[for=serial_input]{
+  position: absolute;
+  left: 2%;
+  top: 20%;
+}
+#insertP > label[for=qnt_input]{
+  position: absolute;
+  left: 5%;
+  bottom: 34%;
+}
+.goIn{
+  position: absolute;
+  width: 80%;
+  height: 10%;
+  bottom: 7%;
+  left: 10%;
+}
+.putPassw{
+  position: absolute;
+  width: 80%;
+  height: 10%;
+  bottom: 21%;
+  left: 10%;
+  border-radius: 10px;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  border-color: #ff1616;
+}
+.putUsername{
+  position: absolute;
+  width: 80%;
+  height: 10%;
+  bottom: 37%;
+  left: 10%;
+}
+.label1{
+  display: block;
+  position: absolute;
+  bottom: 48%;
+  left: 12%;
+  font-size: 12pt;
+}
+.label2{
+  display: block;
+  position: absolute;
+  bottom: 31%;
+  left: 12%;
+  font-size: 12pt;
+}
+.Logo_p{
+  position: absolute;
+  width: 58%;
+  height: 55%;
+  top: 0;
+  left: 21%;
+}
+nav > a{
+  display: block;
+  margin-left: 12px;
+  text-decoration: none;
+  color: #662517;
+}
+nav > a:hover{
+  color: #ff1616;
+}
+.userPhoto{
+  position: absolute;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  background-image: url("userPhoto.png");
+  background-position: center;
+  background-size: cover;
+  left: 2%;
+  top: 2%;
+}
+.info{
+  position: absolute;
+  left: 15%;
+  top: 5%;
+  display: inline-block;
+  line-height: 200%;
+}
+li{
+  display: inline-block;
+  list-style: none;
+}
+.options{
+  width: 90%;
+  position: absolute;
+  line-height: 250%;
+  left: 0.8%;
+}
+span > span{
+  display: inline-block;
+}
+span > span > p{
+  font-weight: bold;
+}
+.options1{
+  position: absolute;
+  left: 1%;
+}
+.options2{
+  position: absolute;
+  left: 25.5%;
+}
+.options3{
+  position: absolute;
+  left: 50%;
+}
+#finalPrice > h1{
+  font-size: 35pt;
+}
+.btns{
+  position: absolute;
+  right: 1%;
+  bottom: 2%;
+  width: 14%;
+  height: 14%;
+}
+.btns > button{
+  display: block;
+  width: 100%;
+  height: 48%;
+  margin-bottom: 2%;
+}
+.close{
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0;
+  background-color: #ff1616;
+  width: 10%;
+  height: 7%;
+  border-radius: 10px;
+}
+/*Ki Pão-Adicionar produto.html*/
+#add_product, #product, #add_productt, #product4{
+  width: 100%;
+  border-collapse: collapse;
+}
+.line2, .linne2, .linne3{
+  position: absolute;
+  width: 380px;
+  height: 200px;
+  top: 2%;
+  left: 5%;
+}
+.line2 .button{
+  width: 210px;
+  transform: translate(20%,-1040%);
+}
+.line2 button{
+  width: 210px;
+  transform: translate(186%,-1140%);
+}
+.breakapart{
+  position: relative;
+  top: 62%;
+  width: 300px;
+  height: 350px;
+}
+.breakapartt{
+  position: relative;
+  left: 90%;
+  width: 300px;
+  height: 350px;
+  transform: translateY(-64%);
+}
+.breakapartt input, .breakapart input, .breakapart1 input, .breakapart2 input, .space input, .space2 input, .breakapart3 input, .breakapartt4 input{
+  margin-top: 10%;
+}
+/*Ki Pão-Editar produto.html*/
+.breakapart1{
+  position: relative;
+  left: 90%;
+  width: 300px;
+  height: 350px;
+  transform: translate(-115%,35%);
+}
+.breakapart2{
+  position: relative;
+  left: 90%;
+  width: 300px;
+  height: 350px;
+  transform: translateY(-65%);
+}
+.linne2 .button, .linne3 .buttonn{
+  width: 210px;
+  height: 40px;
+  transform: translate(185%,-1028%);
+}
+.button1{
+  position: absolute;
+  right: 1%;
+  bottom: 2%;
+  width: 14%;
+  height: 14%;
+}
+.button1 > button{
+  display: block;
+  width: 100%;
+  height: 48%;
+  margin-bottom: 2%;
+} 
+/*Ki Pão-Remover produto.html*/
+.space{
+  position: relative;
+  top: 62%;
+  width: 300px;
+  height: 350px;
+}
+.space2{
+  position: relative;
+  left: 90%;
+  width: 300px;
+  height: 350px;
+  transform: translateY(-65%);
+}
+/*Ki Pão-Adicionar usuário.html*/
+.breakapart3{
+  position: relative;
+  top: 62%;
+  left: 6%;
+  width: 300px;
+  height: 350px;
+}
+.breakapartt4{
+  position: relative;
+  left: 99%;
+  width: 300px;
+  height: 350px;
+  transform: translateY(-64%);
+}
+.label{
+  position: absolute;
+  left: 0%;
+  top: 11.5%;
+  transform: translateX(-120%);
+}
+.label11{
+  position: absolute;
+  left: 0%;
+  top: 30.5%;
+  transform: translateX(-120%);
+}
+.label22{
+  position: absolute;
+  left: 0%;
+  top: 51%;
+  transform: translateX(-116%);
+}
+.label3{
+  position: absolute;
+  left: 0%;
+  top: 70%;
+  transform: translateX(-130%);
+}
+.label23{
+  position: absolute;
+  left: 0%;
+  top: 70%;
+  transform: translateX(-130%);
+}
+.label33{
+  position: absolute;
+  left: 0%;
+  top: 90%;
+  transform: translateX(-130%);
+}
+.label4{
+  position: absolute;
+  left: 0%;
+  top: 11.5%;
+  transform: translateX(-110%);
+}
+.label5{
+  position: absolute;
+  left: 0%;
+  top: 30.5%;
+  transform: translateX(-105%);
+}
+.label6{
+  position: absolute;
+  left: 0%;
+  top: 51%;
+  transform: translateX(-108%);
+}
+.label7{
+  position: absolute;
+  left: 0%;
+  top: 71%;
+  transform: translateX(-118%);
+}
+.line2 .buttonn{
+  width: 210px;
+  height: 40px;
+  transform: translate(180%,-850%);
+}
+.label33{
+  position: absolute;
+  left: 0%;
+  top: 70%;
+  transform: translateX(-120%);
+}
+.line2 .buttonn1{
+  width: 210px;
+  height: 40px;
+  transform: translate(10%,-700%);
+}
+.line2 .buttonn2{
+  width: 210px;
+  height: 40px;
+  transform: translate(180%,-800%);
+}
+.button11{
+  position: absolute;
+  right: 1%;
+  bottom: 0%;
+  width: 14%;
+  height: 17%;
+}
+.button11 > button{
+  display: block;
+  width: 100%;
+  height: 48%;
+  margin-bottom: 4%;
+}
+.line2 .buttonn19{
+ width: 210px;
+  height: 40px;
+  transform: translate(180%,-700%);
+}
+.buttonM{
+  position: absolute;
+  right: 1%;
+  top: 14%;
+  width: 12%;
+  height: 7%;
+}
+.moneyB{
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+.cardB{
+ position: absolute;
+ left: 15%;
+ top: 55%;
+}
+#valueT ~ label{
+  position: absolute;
+  top: 23%;
+  left: 15%;
+}
+#change > ul ~ button{
+  position: absolute;
+  bottom: 5%;
+  left: 15%;
+}
+#change > ul{
+  position: absolute;
+  top: 30%;
+  line-height: 350%;
+  left: 8%;
+}
+#change > h2{
+  position: absolute;
+  top:28%;
+  left: 15%;
+}
+.spanO{
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+.spanO ~ button{
+  position: absolute;
+  bottom: 5%;
+  left: 15%;
+}
+.spanO > ul{
+  line-height: 350%;
+}
+.img1{
+  border-radius: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  transform: translateY(230%);
+}
+.img2{
+  border-radius: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 31%;
+  transform: translateY(230%);
+}
+.img3{
+  border-radius: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 53%;
+  transform: translateY(230%);
+}
+.img4{
+  border-radius: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 75%;
+  transform: translateY(230%);
+}
+.img5{
+  border-radius: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  transform: translateY(380%);
+}
+.img6{
+  border-radius: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 31%;
+  transform: translateY(380%);
+}
+.img7{
+  border-radius: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 53%;
+  transform: translateY(380%);
+}
+.img8{
+  border-radius: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 75%;
+  transform: translateY(380%);
+}
+.R1{
+  position: absolute;
+  bottom: 0;
+  left: 12.5%;
+  transform: translateY(1420%);
+}
+.R2{
+  position: absolute;
+  bottom: 0;
+  left: 33.5%;
+  transform: translateY(1420%);
+}
+.R3{
+  position: absolute;
+  bottom: 0;
+  left: 55.5%;
+  transform: translateY(1420%);
+}
+.R4{
+  position: absolute;
+  bottom: 0;
+  left: 78.5%;
+  transform: translateY(1420%);
+}
+.R5{
+  position: absolute;
+  bottom: 0;
+  left: 13%;
+  transform: translateY(2255%);
+}
+.R6{
+  position: absolute;
+  bottom: 0;
+  left: 34.5%;
+  transform: translateY(2255%);
+}
+.R7{
+  position: absolute;
+  bottom: 0;
+  left: 56.5%;
+  transform: translateY(2255%);
+}
+.R8{
+  position: absolute;
+  bottom: 0;
+  left: 78%;
+  transform: translateY(2255%);
+}
+.mapDiv{
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  left: 64%;
+  bottom: 0;
+  border: 2px solid #ff1616;
+  border-radius: 8px;
+  transform: translateY(350%);
+}
+.map{
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+.head{
+  background-color: #f9af26;
+}
+.oldTown{
+  width: 512.25px;
+  height: 350px;
+  display: inline-block;
+  margin-left: 5%;
+}
+.text{
+  position: absolute;
+  text-align: justify;
+  word-break: normal;
+  max-width: 50%;
+  line-height: 16pt;
+  float: left;
+  display: inline-block;
+  margin-left: 2%;
+}
+.text2{
+  float: left;
+  text-align: justify;
+  word-break: normal;
+  max-width: 50%;
+  line-height: 16pt;
+  margin-left: 5%;
+}
+.textContent{
+  width: 100%;
+}
+.bakeryPhoto{
+  width: 512.25px;
+  height: 350px;
+  float: left;
+  display: inline-block;
+  margin-left: 2%;
+}
+.h1{
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  transform: translateY(2710%);
+}
+.h11{
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  font-size: 18px;
+  transform: translateY(5100%);
+}
+.h12{
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  font-size: 18px;
+  transform: translateY(5240%);
+}
+.h22{
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  font-size: 18px;
+  transform: translateY(5370%);
+}
